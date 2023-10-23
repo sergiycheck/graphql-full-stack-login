@@ -4,7 +4,6 @@ import { ApolloProvider } from "@apollo/client";
 import { client } from "./data-fetching/apollo-client";
 import { router } from "./routing/router";
 import { RouterProvider } from "react-router-dom";
-
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

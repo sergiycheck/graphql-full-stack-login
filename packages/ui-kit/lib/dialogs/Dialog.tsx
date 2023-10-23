@@ -39,9 +39,12 @@ const Dialog: DialogComponent = ({ children, isVisible, onClose }: DialogProps) 
   };
 
   return (
-    <div id={scrim} onClick={handleClose} className={`fixed inset-0 z-20 flex bg-gray-800/50`}>
-      <div className="z-50 flex  flex-col items-center justify-center overflow-hidden">
-        <div className="absolute left-1/2 top-1/2 z-10 flex w-11/12 min-w-[280px] max-w-[580px] -translate-y-1/2 -translate-x-1/2 animate-fade-in flex-col gap-[16px] rounded-[28px] bg-indigo-50 pt-[24px] dark:bg-gray-900">
+    <div id={scrim} onClick={handleClose} className={`uk-fixed uk-inset-0 uk-z-20 uk-flex uk-bg-gray-800/50`}>
+      <div className="uk-z-50 uk-flex  uk-flex-col uk-items-center uk-justify-center uk-overflow-hidden">
+        <div
+          className="uk-absolute uk-left-1/2 uk-top-1/2 uk-z-10 uk-flex w-11/12 uk-min-w-[280px] uk-max-w-[580px] uk--translate-y-1/2 uk--translate-x-1/2 uk-animate-fade-in 
+        uk-flex-col uk-gap-[16px] uk-rounded-[28px] uk-bg-indigo-50 uk-pt-[24px] uk-dark:bg-gray-900"
+        >
           {/*header*/}
           {children}
         </div>
