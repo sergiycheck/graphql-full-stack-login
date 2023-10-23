@@ -1,5 +1,5 @@
 import { useAuthStore } from "../../store/auth.store";
-import { Button } from "../../ui/shared";
+import { Button } from "ui-kit";
 import { useQuery } from "@apollo/client";
 import { GET_USER, GetUserQueryResponse } from "../auth/queries";
 

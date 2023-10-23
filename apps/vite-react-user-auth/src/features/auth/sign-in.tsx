@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button, Input } from "../../ui/shared";
+import { Button, Input } from "ui-kit";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER, LoginUserMutationResponse } from "./mutations";
 import { useNavigate } from "react-router-dom";

@@ -5,7 +5,7 @@ import { REGISTER_USER, RegisterUserMutationResponse } from "./mutations";
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "../../store/auth.store";
 import { RegisterSchema, registerSchema } from "./types";
-import { Button, Input } from "../../ui/shared";
+import { Button, Input } from "ui-kit";
 
 export function SignUp() {
   const navigate = useNavigate();
