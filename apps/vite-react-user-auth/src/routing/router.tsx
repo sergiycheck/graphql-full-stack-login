@@ -5,6 +5,7 @@ import { Home } from "../features/home/home";
 import { ErrorPage } from "../features/error-page";
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "../App";
+import { ProtectedRoute } from "../features/protected-route";
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +15,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: (
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/auth",

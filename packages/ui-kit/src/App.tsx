@@ -12,9 +12,9 @@ export function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Shared ui kit</h1>
+      <h1 className="uk-text-3xl uk-font-bold uk-underline">Shared ui kit</h1>
 
-      <div className="flex flex-col w-full items-center justify-center">
+      <div className="uk-flex uk-flex-col uk-w-full uk-items-center uk-justify-center">
         <Button>simple button</Button>
         <Input placeholder="simple input" />
 
@@ -25,8 +25,8 @@ export function App() {
             headline="Reset Settings?"
             text="Use dialogs for prompts that block an app’s normal operation, and for critical information that requires a specific user task, decision, or acknowledgement."
           />
-          <Dialog.Body className={"flex w-full flex-col"}>
-            <p className="text-sm">dialog body</p>
+          <Dialog.Body className={"uk-flex uk-w-full uk-flex-col"}>
+            <p className="uk-text-sm">dialog body</p>
           </Dialog.Body>
           <Dialog.Footer>
             <Button onClick={onClose}>Cancel</Button> <Button onClick={onClose}>Accept</Button>

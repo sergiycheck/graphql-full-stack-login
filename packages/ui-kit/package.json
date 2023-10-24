@@ -10,7 +10,7 @@
     }
   },
   "scripts": {
-    "build-ui": "rm -rf dist && tsc --p ./tsconfig-ui-build.json && vite --config vite.ui.config.ts build",
+    "build-ui": "rm -rf dist && tsc --p ./tsconfig-ui-build.json && vite --config vite.ui.config.ts build && npx tailwindcss -o ./dist/build.css --minify && echo \"import './build.css';\"|cat - ./dist/index.js > /tmp/out && mv /tmp/out ./dist/index.js",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

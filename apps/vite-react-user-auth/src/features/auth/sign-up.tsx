@@ -5,7 +5,7 @@ import { REGISTER_USER, RegisterUserMutationResponse } from "./mutations";
 import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "../../store/auth.store";
 import { RegisterSchema, registerSchema } from "./types";
-import { Button, Input } from "ui-kit";
+import { Button, Input, Card } from "ui-kit";
 
 export function SignUp() {
   const navigate = useNavigate();
@@ -50,22 +50,29 @@ export function SignUp() {
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6 gap-4">
-        <form className=" sm:col-span-3 md:col-start-3 md:col-span-2 flex flex-col gap-4" onSubmit={onSubmit}>
-          <label htmlFor="email-input" className="block text-sm font-medium text-gray-900 dark:text-white">
-            Your email
-          </label>
-          <Input {...register("email")} id="email-input" />
-          <label htmlFor="password-input" className="block text-sm font-medium text-gray-900 dark:text-white">
-            Password
-          </label>
-          <Input {...register("password")} type="password" id="password-input" />
-          <label htmlFor="repeat-password-input" className="block  text-sm font-medium text-gray-900 dark:text-white">
-            Repeat password
-          </label>
-          <Input {...register("confirmPassword")} type="password" id="repeat-password-input" />
-          {errors.confirmPassword && <p className="text-red-500">{errors.confirmPassword.message}</p>}
-          <Button type="submit">Confirm</Button>
-        </form>
+        <Card bg="bg-none" className="sm:col-span-3 md:col-start-3 md:col-span-2">
+          <Card.Body>
+            <form className="flex flex-col gap-4" onSubmit={onSubmit}>
+              <label htmlFor="email-input" className="block text-sm font-medium text-gray-900 dark:text-white">
+                Your email
+              </label>
+              <Input {...register("email")} id="email-input" />
+              <label htmlFor="password-input" className="block text-sm font-medium text-gray-900 dark:text-white">
+                Password
+              </label>
+              <Input {...register("password")} type="password" id="password-input" />
+              <label
+                htmlFor="repeat-password-input"
+                className="block  text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Repeat password
+              </label>
+              <Input {...register("confirmPassword")} type="password" id="repeat-password-input" />
+              {errors.confirmPassword && <p className="text-red-500">{errors.confirmPassword.message}</p>}
+              <Button type="submit">Confirm</Button>
+            </form>
+          </Card.Body>
+        </Card>
       </div>
     </>
   );
